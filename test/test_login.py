@@ -1,15 +1,10 @@
 import os, json
 import requests
 
-host = "http://127.0.0.1"
-port = 5000
-
-signin_url = "%s:%s/logon" % (host,str(port))
-
-"""
 host = os.getenv("FLASK_HOST")
 port = os.getenv("FLASK_PORT")
-"""
+
+signin_url = "%s:%s/logon" % (host,str(port))
 
 def test_login_users():
     session = requests.Session()

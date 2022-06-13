@@ -1,15 +1,10 @@
 import os, json
 import requests
 
-host = "http://127.0.0.1"
-port = 5000
-
-signup_url = "%s:%s/signup" % (host,str(port))
-
-"""
 host = os.getenv("FLASK_HOST")
 port = os.getenv("FLASK_PORT")
-"""
+
+signup_url = "%s:%s/signup" % (host,str(port))
 
 def test_create_users():
     session = requests.Session()
